@@ -16,6 +16,7 @@ public class SpringSecurityJwtExampleApplication {
     @Autowired
     private UserRepository repository;
 
+    //PostConstruct es para que este método corra una vez se inicie la aplicación
     @PostConstruct
     public void initUsers() {
         List<User> users = Stream.of(

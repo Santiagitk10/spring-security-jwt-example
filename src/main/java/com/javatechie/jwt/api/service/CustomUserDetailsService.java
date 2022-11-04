@@ -15,6 +15,9 @@ public class CustomUserDetailsService implements UserDetailsService {
     @Autowired
     private UserRepository repository;
 
+    //Se está mapeando el user que se encuentra con el nombre al UserDetails que debe devolver
+    //el método que es de la librería de spring security, para validar si el usuario y la 
+    //contraseña son válidos
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         User user = repository.findByUserName(username);
